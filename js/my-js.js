@@ -56,10 +56,6 @@ $(function () {
 		}, 500)
 	}
 
-	$('.card-block').on('mousemove', handleMousmove);
-
-	$('.card-block').on('mouseout', handleMouseout);
-
 	/*Sort*/
 
 	var cardsArray = [
@@ -124,6 +120,8 @@ $(function () {
 		})
 	}
 
+	/*Events*/
+
 	$('.picker-item.a-z').on('click', function () {
 		$('.picker-border').css('left', '0');
 		$('.picker-border').css('opacity', '1');
@@ -139,4 +137,8 @@ $(function () {
 		$('.picker-border').css('opacity', '1');
 		drawCards('size');
 	})
+
+	$('.card-block').on('mousemove', handleMousmove);
+
+	$('.card-block').on('mouseout', handleMouseout);
 })
